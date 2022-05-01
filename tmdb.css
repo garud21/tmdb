@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Dancing+Script&family=Grape+Nuts&family=Square+Peg&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+body {
+    margin: 0px;
+    color: whitesmoke;
+    font-family: 'Dancing Script';
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(7, 212, 34, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    height: 60px;
+    color: whitesmoke;
+    border: 2px solid red;
+    border-radius: 8px;
+    box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.9);
+    background: rgba(24, 24, 27, 0.5);
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+.search {
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 40px;
+    background: rgba(24, 24, 27, 0.5);
+    border-radius: 10px;
+    border: 1px solid #eee;
+    ;
+    padding: 0.5rem 1rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    bottom: 58px;
+    left: 3px;
+    border-radius: 50%;
+    transition: transform .7s ease-in-out;
+}
+
+.logo:hover {
+    animation: rotate-btn .5s linear 3;
+    -webkit-animation: rotate-btn .5s linear 3;
+}
+
+.rotate-btn:hover {
+    transform: rotate(360) translateZ(0);
+}
+
+#sharingan-coders {
+    position: relative;
+    top: 30px;
+    color: whitesmoke;
+    font-family: 'Dancing Script';
+    font-size: larger;
+    left: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo :hover {
+    cursor: pointer;
+}
+
+.search:focus {
+    outline: 0;
+    background-color: rgb(42, 36, 36);
+    color: rgb(246, 243, 243);
+}
+
+.search::placeholder {
+    color: rgb(254, 251, 251);
+    align-items: center;
+}
+
+.movie {
+    width: 300px;
+    margin: 4rem;
+    padding: 2rem;
+    box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.8);
+    background: rgba(24, 24, 27, 1.5);
+    border-radius: 10px;
+    border: 1px solid #eee;
+    position: relative;
+    overflow: hidden;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    display: flex;
+    color: whitesmoke;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    margin-top: 0;
+    font-weight: bolder;
+}
+
+.class-info span {
+    background-color: rgba(170, 176, 181, 0.1);
+    padding: 0.25rem 0.5rem;
+    font-weight: bold;
+    border-radius: 3px;
+    position: relative;
+    left: 200px;
+    bottom: 15px;
+    color: lightgreen;
+}
+
+.class-info span .green {
+    color: lightgreen;
+}
+
+.logo img {
+    border-radius: 50%;
+}
+
+.overview {
+    position: absolute;
+    color: rgb(9, 9, 9);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: whitesmoke;
+    padding: 1rem;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: all 0.3s ease-in;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+    border-radius: 9px;
+    border: 2px solid rgb(13, 13, 13);
+}
+
+.movie-info span.green {
+    color: lightgreen;
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: red;
+}
+
+.green {
+    color: greenyellow;
+}
+
+.orange {
+    color: orange;
+}
+
+.red {
+    color: red;
+}
+
+#tags {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.tag {
+    color: whitesmoke;
+    padding: 10px 20px;
+    background-color: black;
+    border-radius: 50px;
+    margin: 5px;
+    display: inline-block;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+}
+
+.tag.highlight {
+    background-color: orangered;
+}
+
+.pagination {
+    display: flex;
+    margin: 10px 30px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.page {
+    padding: 20px;
+    cursor: pointer;
+}
+
+.page.disabled {
+    cursor: not-allowed;
+    color: gray;
+}
+
+.current {
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: 5px solid orange;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.know-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+    color: whitesmoke;
+    font-weight: 400;
+    border: 0px;
+    border-radius: 45px;
+    padding: 10px 20px;
+    margin: 5px;
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+}
+
+
+/* The Overlay (background) */
+
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    /* Black fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/opacity */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+
+/* Position the content inside the overlay */
+
+.overlay-content {
+    position: relative;
+    top: 10%;
+    /* 25% from the top */
+    width: 100%;
+    /* 100% width */
+    text-align: center;
+    /* Centered text/links */
+    margin-top: 30px;
+    /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+
+/* The navigation links inside the overlay */
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    /* Display block instead of inline */
+    transition: 0.3s;
+    /* Transition effects on hover (color) */
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+.embed.hide {
+    display: none;
+}
+
+.embed.show {
+    display: inline-block;
+}
+
+.arrow {
+    position: absolute;
+    font-size: 40px;
+}
+
+.arrow.left-arrow {
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+
+.arrow.right-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+}
+
+.dots {
+    margin-top: 30px;
+}
+
+.dots .dot {
+    padding: 5px 15px;
+    border-radius: 50%;
+    border: 5px solid var(--secondary-color);
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 5px;
+}
+
+.dots .dot.active {
+    border-color: orange;
+}
